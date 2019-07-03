@@ -1,0 +1,7 @@
+﻿### Demonstration for login validation in Windows forms VB.NET
+
+This is an extension of the following [repository](https://github.com/karenpayneoregon/ClassValidationVisualBasic).
+
+Given the task to obtain a user name with length requirements and password with password confirmation along with special rules this project shows one method to perform a new login.
+
+Things like checking to see if the user name has been used already is not provided.
