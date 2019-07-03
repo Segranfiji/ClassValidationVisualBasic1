@@ -1,4 +1,4 @@
-﻿### Demonstration for login validation in Windows forms VB.NET
+### Demonstration for login validation in Windows forms VB.NET
 
 This is an extension of the following [repository](https://github.com/karenpayneoregon/ClassValidationVisualBasic).
 
