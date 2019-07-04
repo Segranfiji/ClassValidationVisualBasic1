@@ -38,7 +38,7 @@ Namespace Entities
         ''' </summary>
         ''' <returns></returns>
         <Compare("Password", ErrorMessage:="Passwords do not match, please try again"),
-            DataType(DataType.CreditCard)>
+            DataType(DataType.Text)>
         <StringLength(20, MinimumLength:=6)>
         Public Property PasswordConfirmation() As String
 
