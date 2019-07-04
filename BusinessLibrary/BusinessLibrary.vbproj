@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0665C0A-9C40-40F9-A21B-BC2EC1945568}</ProjectGuid>
+    <ProjectGuid>{EAEFA153-9F33-4B1B-973D-9FF44EC528E9}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ValidatorLibrary</RootNamespace>
-    <AssemblyName>ValidatorLibrary</AssemblyName>
+    <RootNamespace>BusinessLibrary</RootNamespace>
+    <AssemblyName>BusinessLibrary</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -19,7 +19,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ValidatorLibrary.xml</DocumentationFile>
+    <DocumentationFile>BusinessLibrary.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -28,7 +28,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ValidatorLibrary.xml</DocumentationFile>
+    <DocumentationFile>BusinessLibrary.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -65,9 +65,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\ErrorContainer.vb" />
-    <Compile Include="LanguageExtensions\StringExtensions.vb" />
-    <Compile Include="LanguageExtensions\ValidatorExtensions.vb" />
+    <Compile Include="Entities\CustomerLogin.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -83,11 +81,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Rules\CreditCardAttribute.vb" />
-    <Compile Include="Rules\PasswordCheck.vb" />
-    <Compile Include="Validators\EntityValidationResult.vb" />
-    <Compile Include="Validators\EntityValidator.vb" />
-    <Compile Include="Validators\ValidationHelper.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -109,7 +102,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Rules\readme.txt" />
+    <ProjectReference Include="..\ValidatorLibrary\ValidatorLibrary.vbproj">
+      <Project>{E0665C0A-9C40-40F9-A21B-BC2EC1945568}</Project>
+      <Name>ValidatorLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

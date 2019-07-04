@@ -22,22 +22,22 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.FullNameLabel = New System.Windows.Forms.Label()
         Me.CloseAppButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'FullNameLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.FullNameLabel.AutoSize = True
+        Me.FullNameLabel.Location = New System.Drawing.Point(12, 9)
+        Me.FullNameLabel.Name = "FullNameLabel"
+        Me.FullNameLabel.Size = New System.Drawing.Size(192, 13)
+        Me.FullNameLabel.TabIndex = 0
+        Me.FullNameLabel.Text = "Place holder for user first and last name"
         '
         'CloseAppButton
         '
-        Me.CloseAppButton.Location = New System.Drawing.Point(3, 37)
+        Me.CloseAppButton.Location = New System.Drawing.Point(244, 113)
         Me.CloseAppButton.Name = "CloseAppButton"
         Me.CloseAppButton.Size = New System.Drawing.Size(75, 23)
         Me.CloseAppButton.TabIndex = 1
@@ -50,15 +50,15 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(341, 148)
         Me.Controls.Add(Me.CloseAppButton)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.FullNameLabel)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MainForm"
+        Me.Text = "Main"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents FullNameLabel As Label
     Friend WithEvents CloseAppButton As Button
 End Class

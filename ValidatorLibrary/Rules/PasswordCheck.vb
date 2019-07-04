@@ -2,8 +2,12 @@
 Imports System.Text.RegularExpressions
 
 Namespace Rules
+    ''' <summary>
+    ''' Specialized class to validate a password
+    ''' </summary>
     Public Class PasswordCheck
         Inherits ValidationAttribute
+
         Public Overrides Function IsValid(value As Object) As Boolean
             Dim validPassword = False
             Dim reason = String.Empty
@@ -12,8 +16,8 @@ Namespace Rules
             If String.IsNullOrWhiteSpace(password) OrElse password.Length < 6 Then
                 reason = "new password must be at least 6 characters long. "
             Else
-                Dim reSymbol As New Regex("((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})")
-                If Not reSymbol.IsMatch(password) Then
+                Dim pattern As New Regex("((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})")
+                If Not pattern.IsMatch(password) Then
                     reason &= "Your new password must contain at least 1 symbol character and number."
                 Else
                     validPassword = True
@@ -29,6 +33,8 @@ Namespace Rules
         End Function
 
     End Class
+    '-------------------------------------------------------------------------------
+    ' Pattern used above
     '-------------------------------------------------------------------------------
     ' (			        # Start of group
     '   (?=.*\d)	    #   must contains one digit from 0-9

@@ -73,6 +73,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\NumericTextbox.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -129,10 +132,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.vbproj">
+      <Project>{eaefa153-9f33-4b1b-973d-9ff44ec528e9}</Project>
+      <Name>BusinessLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLibraryMocked\DataLibraryMocked.vbproj">
+      <Project>{2743de28-357c-4e20-9813-0946d3e69a1c}</Project>
+      <Name>DataLibraryMocked</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ValidatorLibrary\ValidatorLibrary.vbproj">
       <Project>{E0665C0A-9C40-40F9-A21B-BC2EC1945568}</Project>
       <Name>ValidatorLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WindowsFormsLibrary\WindowsFormsLibrary.vbproj">
+      <Project>{7529d1ec-cb05-4f95-96d0-81125ea39489}</Project>
+      <Name>WindowsFormsLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="users.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
